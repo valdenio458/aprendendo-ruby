@@ -14,8 +14,11 @@ while(opcao != 3) do
   if(opcao == 1)
     puts "Digite o nome da receita:"
     nome = gets.chomp()
-    receitas << nome 
-    puts
+    puts "Digite o tipo da receita"
+    tipo = gets.chomp()
+    # hash:
+    receitas << {nome: nome, tipo: tipo}
+    puts 
     # puts "Receita " + nome + " cadastrada com sucesso!"
     puts "Receita #{nome} cadastrada com sucesso!"
     puts
@@ -23,7 +26,7 @@ while(opcao != 3) do
 
     # opção 2:
     elsif(opcao == 2)
-      puts "========== Receitas ========== "
+      puts "========== Receitas cadastradas ========== "
       # for em ruby:
       # for receita in receitas
       #   puts receita
@@ -33,7 +36,9 @@ while(opcao != 3) do
       # receitas.each do |receita|
       #   puts receita
       # end
-      puts receitas
+      receitas.each do |receita|
+        puts "#{receita[:nome]} - #{receita[:tipo]}"
+      end
       puts
     else
       puts "Opção inválida!"
