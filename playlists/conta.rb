@@ -1,3 +1,5 @@
+require_relative 'cliente'
+
 class Conta
   attr_reader :numero, :titular, :saldo # getters
   attr_writer :saldo                    #setters
