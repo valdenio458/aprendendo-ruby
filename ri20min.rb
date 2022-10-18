@@ -37,6 +37,7 @@ class MegaAnfitriao
 end
 
 
+# __FILE__ é uma variável mágica que contém o nome do arquivo atual. $0 é o nome do arquivo usado para iniciar o programa. Esta verificação diz: “Se este é o arquivo principal a ser usado, então…”, isto permite que um arquivo seja usado como biblioteca e nesse contexto não executar código, mas caso o arquivo seja usado como executável então executa esse código.
 if __FILE__ == $0
   mg = MegaAnfitriao.new
   mg.diz_ola
