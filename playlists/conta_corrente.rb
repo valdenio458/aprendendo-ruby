@@ -5,7 +5,7 @@ class ContaCorrente < Conta
 
   def initialize(numero, titular, saldo, limite)
     super(numero, titular, saldo)
-    # super - roda o initialize do pai dessa classe
+    # super - roda o initialize do pai dessa classe(neste caso a classe Conta)
     @limite = limite
   end
 
